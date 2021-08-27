@@ -8,6 +8,7 @@ data "sbercloud_images_image" "ubuntu_image" {
 data "sbercloud_compute_flavors" "flavor_name" {
   availability_zone = "ru-moscow-1a"
   performance_type  = "highmem"
+  generation	      = "m6"
   cpu_core_count    = 4
   memory_size       = 32
 }

@@ -11,6 +11,7 @@ data "sbercloud_availability_zones" "list_of_az" {}
 data "sbercloud_compute_flavors" "flavor_name" {
   availability_zone = data.sbercloud_availability_zones.list_of_az.names[1]
   performance_type  = "computingv3"
+  generation        = "c6"
   cpu_core_count    = 4
   memory_size       = 8
 }
